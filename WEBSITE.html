@@ -25,12 +25,13 @@
     .nav-link:hover::after {
       width: 100%;
     }
+
     /* Floating Calculator Button */
     .floating-btn {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: linear-gradient(to right, #16a34a, #22c55e);
+      background: linear-gradient(to right, #3b82f6, #facc15); /* Blue to Yellow */
       color: white;
       border-radius: 50%;
       padding: 18px;
@@ -43,6 +44,7 @@
     .floating-btn:hover {
       transform: scale(1.1);
     }
+
     /* Calculator Modal */
     .modal {
       display: none;
@@ -81,25 +83,25 @@
       font-size: 1rem;
       border: none;
       border-radius: 0.5rem;
-      background: #16a34a;
+      background: #3b82f6; /* Blue buttons */
       color: white;
       cursor: pointer;
       transition: background 0.2s ease;
     }
     .calc-buttons button:hover {
-      background: #15803d;
+      background: #2563eb;
     }
   </style>
 </head>
-<body class="bg-green-50 min-h-screen flex flex-col">
+<body class="bg-gradient-to-br from-blue-200 via-yellow-100 to-blue-100 min-h-screen flex flex-col">
 
   <!-- Navbar -->
-  <nav class="bg-gradient-to-r from-green-400 to-green-600 shadow-lg px-6 py-4 flex items-center justify-between rounded-b-2xl">
+  <nav class="bg-gradient-to-r from-blue-500 to-yellow-400 shadow-lg px-6 py-4 flex items-center justify-between rounded-b-2xl">
     <!-- Left side with logo + links -->
     <div class="flex items-center space-x-8 text-white font-semibold">
       <!-- Circular Logo -->
-      <a href="WEBSITE.html" class="w-10 h-10 bg-white text-green-600 flex items-center justify-center rounded-full font-bold shadow-md">
-     <img src="LLCI.jpeg" alt="Student Savers Hub Logo" class="w-full h-full object-cover">   
+      <a href="WEBSITE.html" class="w-10 h-10 bg-white text-blue-600 flex items-center justify-center rounded-full font-bold shadow-md">
+        <img src="LLCI.jpeg" alt="Student Savers Hub Logo" class="w-full h-full object-cover">
       </a>
       <!-- Nav Links -->
       <div class="flex space-x-6">
@@ -121,11 +123,11 @@
 
   <!-- Main Content Placeholder -->
   <main class="flex-1 flex items-center justify-center text-center">
-    <h1 class="text-4xl md:text-6xl font-bold text-green-700 drop-shadow-lg animate-pulse">STUDENT SAVERS HUB</h1>
+    <h1 class="text-4xl md:text-6xl font-bold text-blue-700 drop-shadow-lg animate-pulse">STUDENT SAVERS HUB</h1>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gradient-to-r from-green-600 to-green-400 shadow-inner text-center py-6 text-white rounded-t-2xl">
+  <footer class="bg-gradient-to-r from-yellow-400 to-blue-500 shadow-inner text-center py-6 text-white rounded-t-2xl">
     <p class="text-lg font-semibold">© 2025 Student Savers Hub. All rights reserved.</p>
     <p class="text-sm opacity-90">“Small savings today build the foundation for big dreams tomorrow.”</p>
   </footer>
@@ -191,10 +193,5 @@
       });
     });
   </script>
-
 </body>
 </html>
-
-
-
-
