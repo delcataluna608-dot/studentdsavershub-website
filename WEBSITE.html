@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern Dashboard</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- Font Awesome for Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-.nav-link {
-  position: relative;
-  transition: color 0.3s ease;
-}
-.nav-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background-color: white;
-  transition: width 0.3s ease;
-}
-.nav-link:hover::after {
-  width: 100%;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
 </head>
 <body class="bg-green-50 min-h-screen flex flex-col">
-<!-- Navbar -->
-<nav class="bg-gradient-to-r from-green-400 to-green-600 shadow-lg px-6 py-4 flex items-center justify-between rounded-b-2xl">
-  <div class="flex space-x-6 text-white font-semibold">
-    <a href="WEBSITE.html" class="nav-link">Home</a>
-<a href="About.html" class="nav-link">About</a>
-<a href="services.html" class="nav-link">Services</a>
-<a href="contact.html" class="nav-link">Contact</a>
-  </div>
-  <div>
-    <a href="https://www.facebook.com/share/1aF5CDCp6i/?mibextid=wwXIfrs" target="_blank" class="nav-link flex items-center space-x-2">
-      <i class="fab fa-facebook"></i>
-      <span>Facebook</span>
-    </a>
-  </div>
-</nav>
 
-<!-- Main Content Placeholder -->
-<main class="flex-1 flex items-center justify-center">
-  <h1 class="text-4xl md:text-6xl font-bold text-green-700 drop-shadow-lg animate-pulse">STUDENT SAVERS HUB</h1>
-</main>
+  <!-- Navbar -->
+  <nav class="bg-gradient-to-r from-green-400 to-green-600 shadow-lg px-6 py-4 flex items-center justify-between rounded-b-2xl">
+    <!-- Left side with brand + links -->
+    <div class="flex items-center space-x-8 text-white font-semibold">
+      <span class="text-2xl font-bold tracking-wide">Modern Dashboard</span>
+      <div class="flex space-x-6">
+        <a href="WEBSITE.html" class="nav-link">Home</a>
+        <a href="About.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+    </div>
 
-<!-- Footer -->
-<footer class="bg-gradient-to-r from-green-600 to-green-400 shadow-inner text-center py-6 text-white rounded-t-2xl">
-  <p class="text-lg font-semibold">© 2025 Student Savers Hub. All rights reserved.</p>
-  <p class="text-sm opacity-90">PATPAT AND ASTHER GWAPO!!!!!!!!!!</p>
-</footer>
+    <!-- Right side (Facebook link) -->
+    <div>
+      <a href="https://www.facebook.com/share/1aF5CDCp6i/?mibextid=wwXIfrs" target="_blank" class="nav-link flex items-center space-x-2">
+        <i class="fab fa-facebook"></i>
+        <span>Facebook</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content Placeholder -->
+  <main class="flex-1 flex items-center justify-center">
+    <h1 class="text-4xl md:text-6xl font-bold text-green-700 drop-shadow-lg animate-pulse">STUDENT SAVERS HUB</h1>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-green-600 to-green-400 shadow-inner text-center py-6 text-white rounded-t-2xl">
+    <p class="text-lg font-semibold">© 2025 Student Savers Hub. All rights reserved.</p>
+    <p class="text-sm opacity-90">PATPAT AND ASTHER GWAPO!!!!!!!!!!</p>
+  </footer>
+
 </body>
 </html>
