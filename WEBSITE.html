@@ -7,6 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Orbitron -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
   <style>
     .nav-link {
       position: relative;
@@ -26,12 +28,18 @@
       width: 100%;
     }
 
+    /* Gaming font for heading */
+    .gaming-font {
+      font-family: 'Orbitron', sans-serif;
+      letter-spacing: 2px;
+    }
+
     /* Floating Calculator Button */
     .floating-btn {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: linear-gradient(to right, #4169e1, #FFCO3F); /* Blue to Yellow */
+      background: linear-gradient(to right, #4169e1, #ffcc00); /* Blue to Yellow */
       color: white;
       border-radius: 50%;
       padding: 18px;
@@ -123,7 +131,9 @@
 
   <!-- Main Content Placeholder -->
   <main class="flex-1 flex items-center justify-center text-center">
-    <h1 class="text-4xl md:text-6xl font-bold text-blue-700 drop-shadow-lg animate-pulse">STUDENT SAVERS HUB</h1>
+    <h1 class="gaming-font text-4xl md:text-6xl font-extrabold text-blue-700 drop-shadow-lg animate-pulse">
+      STUDENT SAVERS HUB
+    </h1>
   </main>
 
   <!-- Footer -->
@@ -195,4 +205,3 @@
   </script>
 </body>
 </html>
-
