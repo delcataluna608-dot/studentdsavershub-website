@@ -7,9 +7,24 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts: Orbitron -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+
   <style>
+    /* Import Brick Sans */
+    @font-face {
+      font-family: 'Brick Sans';
+      src: url('BrickSans-Bold.otf') format('opentypefile'),
+           url('BrickSans-Bold.otf') format('opentypefile');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Brick Sans';
+      src: url('fonts/BrickSans-Bold.woff2') format('woff2'),
+           url('fonts/BrickSans-Bold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
     .nav-link {
       position: relative;
       transition: color 0.3s ease;
@@ -28,10 +43,10 @@
       width: 100%;
     }
 
-    /* Gaming font for heading */
-    .gaming-font {
-      font-family: 'Orbitron', sans-serif;
-      letter-spacing: 2px;
+    /* Brick Sans font for heading */
+    .brick-font {
+      font-family: 'Brick Sans', sans-serif;
+      letter-spacing: 1px;
     }
 
     /* Floating Calculator Button */
@@ -39,7 +54,7 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: linear-gradient(to right, #4169e1, #ffcc00); /* Blue to Yellow */
+      background: linear-gradient(to right, #4169e1, #ffcc00);
       color: white;
       border-radius: 50%;
       padding: 18px;
@@ -91,7 +106,7 @@
       font-size: 1rem;
       border: none;
       border-radius: 0.5rem;
-      background: #3b82f6; /* Blue buttons */
+      background: #3b82f6;
       color: white;
       cursor: pointer;
       transition: background 0.2s ease;
@@ -105,13 +120,10 @@
 
   <!-- Navbar -->
   <nav class="bg-gradient-to-r from-blue-500 to-yellow-400 shadow-lg px-6 py-4 flex items-center justify-between rounded-b-2xl">
-    <!-- Left side with logo + links -->
     <div class="flex items-center space-x-8 text-white font-semibold">
-      <!-- Circular Logo -->
       <a href="WEBSITE.html" class="w-10 h-10 bg-white text-blue-600 flex items-center justify-center rounded-full font-bold shadow-md">
         <img src="LLCI.jpeg" alt="Student Savers Hub Logo" class="w-full h-full object-cover">
       </a>
-      <!-- Nav Links -->
       <div class="flex space-x-6">
         <a href="WEBSITE.html" class="nav-link">Home</a>
         <a href="About.html" class="nav-link">About</a>
@@ -119,8 +131,6 @@
         <a href="contact.html" class="nav-link">Contact</a>
       </div>
     </div>
-
-    <!-- Right side (Facebook link) -->
     <div>
       <a href="https://www.facebook.com/share/1F7fwNGRhD/?mibextid=wwXIfr" target="_blank" class="nav-link flex items-center space-x-2">
         <i class="fab fa-facebook"></i>
@@ -129,9 +139,9 @@
     </div>
   </nav>
 
-  <!-- Main Content Placeholder -->
+  <!-- Main Content -->
   <main class="flex-1 flex items-center justify-center text-center">
-    <h1 class="gaming-font text-4xl md:text-6xl font-extrabold text-blue-700 drop-shadow-lg animate-pulse">
+    <h1 class="brick-font text-4xl md:text-6xl font-extrabold text-blue-700 drop-shadow-lg animate-pulse">
       STUDENT SAVERS HUB
     </h1>
   </main>
