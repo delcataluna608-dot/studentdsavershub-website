@@ -7,23 +7,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Font: Montserrat (close to Brick Sans) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
   <style>
-    /* Import Brick Sans */
-    @font-face {
-      font-family: 'Brick Sans';
-      src: url('BrickSans-Bold.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-    }
-    @font-face {
-      font-family: 'Brick Sans';
-      src: url('fonts/BrickSans-Bold.woff2') format('woff2'),
-           url('fonts/BrickSans-Bold.ttf') format('truetype');
-      font-weight: bold;
-      font-style: normal;
-    }
-
     .nav-link {
       position: relative;
       transition: color 0.3s ease;
@@ -42,9 +29,10 @@
       width: 100%;
     }
 
-    /* Brick Sans font for heading */
-    .brick-font {
-      font-family: 'Brick Sans', sans-serif;
+    /* Heading font */
+    .brick-like {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
       letter-spacing: 1px;
     }
 
@@ -140,7 +128,7 @@
 
   <!-- Main Content -->
   <main class="flex-1 flex items-center justify-center text-center">
-    <h1 class="brick-font text-4xl md:text-6xl font-extrabold text-blue-700 drop-shadow-lg animate-pulse">
+    <h1 class="brick-like text-4xl md:text-6xl text-blue-700 drop-shadow-lg animate-pulse">
       STUDENT SAVERS HUB
     </h1>
   </main>
@@ -214,4 +202,3 @@
   </script>
 </body>
 </html>
-
