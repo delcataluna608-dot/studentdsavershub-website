@@ -4,104 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/jpeg" href="LLCI.jpeg">
-  <title>Student Savers Hub</title>
+  <title>Services - Student Savers Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Font: Montserrat (close to Brick Sans) -->
+  <!-- Google Font: Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
   <style>
-    .nav-link {
-      position: relative;
-      transition: color 0.3s ease;
-    }
+    .nav-link { position: relative; transition: color 0.3s ease; }
     .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      background-color: white;
-      transition: width 0.3s ease;
+      content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px;
+      background-color: white; transition: width 0.3s ease;
     }
-    .nav-link:hover::after {
-      width: 100%;
-    }
-
-    /* Heading font */
-    .brick-like {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    /* Floating Calculator Button */
-    .floating-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: linear-gradient(to right, #4169e1, #ffcc00);
-      color: white;
-      border-radius: 50%;
-      padding: 18px;
-      font-size: 1.5rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      z-index: 50;
-    }
-    .floating-btn:hover {
-      transform: scale(1.1);
-    }
-
-    /* Calculator Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-      justify-content: center;
-      align-items: center;
-      z-index: 100;
-    }
-    .modal-content {
-      background: white;
-      padding: 20px;
-      border-radius: 1rem;
-      width: 300px;
-      text-align: center;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
-    }
-    .calc-display {
-      width: 100%;
-      height: 50px;
-      margin-bottom: 10px;
-      text-align: right;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 0.5rem;
-      font-size: 1.2rem;
-    }
-    .calc-buttons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
-    }
-    .calc-buttons button {
-      padding: 15px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 0.5rem;
-      background: #3b82f6;
-      color: white;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-    .calc-buttons button:hover {
-      background: #2563eb;
-    }
+    .nav-link:hover::after { width: 100%; }
+    .brick-like { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 1px; }
+    .infographic-card { cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .infographic-card:hover { transform: scale(1.03); box-shadow: 0 12px 24px rgba(0,0,0,0.2); }
+    .article-panel { max-height: 0; overflow: hidden; transition: max-height 0.5s ease, opacity 0.5s ease; opacity: 0; }
+    .article-panel.active { max-height: 500px; opacity: 1; margin-top: 10px; }
   </style>
 </head>
 <body class="bg-gradient-to-br from-blue-200 via-yellow-100 to-blue-100 min-h-screen flex flex-col">
@@ -115,7 +36,7 @@
       <div class="flex space-x-6">
         <a href="WEBSITE.html" class="nav-link">Home</a>
         <a href="About.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link">Services</a> 
+        <a href="services.html" class="nav-link">Services</a>
       </div>
     </div>
     <div>
@@ -126,11 +47,104 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="flex-1 flex items-center justify-center text-center">
-    <h1 class="brick-like text-4xl md:text-6xl text-blue-700 drop-shadow-lg animate-pulse">
-      STUDENT SAVERS HUB
-    </h1>
+  <!-- Infographics Section -->
+  <main class="flex-1 flex flex-col items-center text-center px-6 py-16">
+    <h1 class="brick-like text-4xl md:text-6xl text-blue-700 drop-shadow-lg mb-12">Our Infographics</h1>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full">
+
+      <!-- Example Card Template (repeat 10 times) -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+        <i class="fas fa-lightbulb text-4xl text-yellow-500 mb-4"></i>
+        <h2 class="text-xl font-bold text-blue-600">Infographic 1</h2>
+        <p class="text-gray-600">Click to learn more</p>
+        <div class="article-panel text-left text-gray-700">
+          <p class="p-3">This is the article content for Infographic 1. It expands when you click the card and collapses when you click again.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+        <i class="fas fa-book-open text-4xl text-green-500 mb-4"></i>
+        <h2 class="text-xl font-bold text-blue-600">Infographic 2</h2>
+        <p class="text-gray-600">Click to learn more</p>
+        <div class="article-panel text-left text-gray-700">
+          <p class="p-3">This is the article content for Infographic 2.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+        <i class="fas fa-chart-line text-4xl text-red-500 mb-4"></i>
+        <h2 class="text-xl font-bold text-blue-600">Infographic 3</h2>
+        <p class="text-gray-600">Click to learn more</p>
+        <div class="article-panel text-left text-gray-700">
+          <p class="p-3">This is the article content for Infographic 3.</p>
+        </div>
+      </div>
+
+      <!-- Repeat until Infographic 10 -->
+      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+        <i class="fas fa-graduation-cap text-4xl text-blue-500 mb-4"></i>
+        <h2 class="text-xl font-bold text-blue-600">Infographic 4</h2>
+        <p class="text-gray-600">Click to learn more</p>
+        <div class="article-panel text-left text-gray-700">
+          <p class="p-3">This is the article content for Infographic 4.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+        <i class="fas fa-piggy-bank text-4xl text-pink-500 mb-4"></i>
+        <h2 class="text-xl font-bold text-blue-600">Infographic 5</h2>
+        <p class="text-gray-600">Click to learn more</p>
+        <div class="article-panel text-left text-gray-700">
+          <p class="p-3">This is the article content for Infographic 5.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+        <i class="fas fa-cogs text-4xl text-gray-600 mb-4"></i>
+        <h2 class="text-xl font-bold text-blue-600">Infographic 6</h2>
+        <p class="text-gray-600">Click to learn more</p>
+        <div class="article-panel text-left text-gray-700">
+          <p class="p-3">This is the article content for Infographic 6.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+        <i class="fas fa-heart text-4xl text-red-400 mb-4"></i>
+        <h2 class="text-xl font-bold text-blue-600">Infographic 7</h2>
+        <p class="text-gray-600">Click to learn more</p>
+        <div class="article-panel text-left text-gray-700">
+          <p class="p-3">This is the article content for Infographic 7.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+        <i class="fas fa-seedling text-4xl text-green-400 mb-4"></i>
+        <h2 class="text-xl font-bold text-blue-600">Infographic 8</h2>
+        <p class="text-gray-600">Click to learn more</p>
+        <div class="article-panel text-left text-gray-700">
+          <p class="p-3">This is the article content for Infographic 8.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+        <i class="fas fa-users text-4xl text-purple-500 mb-4"></i>
+        <h2 class="text-xl font-bold text-blue-600">Infographic 9</h2>
+        <p class="text-gray-600">Click to learn more</p>
+        <div class="article-panel text-left text-gray-700">
+          <p class="p-3">This is the article content for Infographic 9.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+        <i class="fas fa-globe text-4xl text-blue-400 mb-4"></i>
+        <h2 class="text-xl font-bold text-blue-600">Infographic 10</h2>
+        <p class="text-gray-600">Click to learn more</p>
+        <div class="article-panel text-left text-gray-700">
+          <p class="p-3">This is the article content for Infographic 10.</p>
+        </div>
+      </div>
+
+    </div>
   </main>
 
   <!-- Footer -->
@@ -139,68 +153,15 @@
     <p class="text-sm opacity-90">“Small savings today build the foundation for big dreams tomorrow.”</p>
   </footer>
 
-  <!-- Floating Calculator Button -->
-  <button class="floating-btn" id="openCalc">
-    <i class="fas fa-calculator"></i>
-  </button>
-
-  <!-- Calculator Modal -->
-  <div class="modal" id="calcModal">
-    <div class="modal-content">
-      <input type="text" id="calcDisplay" class="calc-display" disabled>
-      <div class="calc-buttons">
-        <button>7</button><button>8</button><button>9</button><button>/</button>
-        <button>4</button><button>5</button><button>6</button><button>*</button>
-        <button>1</button><button>2</button><button>3</button><button>-</button>
-        <button>0</button><button>.</button><button>=</button><button>+</button>
-        <button id="clear" class="col-span-4 bg-red-500 hover:bg-red-600">C</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Calculator Script -->
+  <!-- Script for Toggle -->
   <script>
-    const openCalc = document.getElementById("openCalc");
-    const calcModal = document.getElementById("calcModal");
-    const calcDisplay = document.getElementById("calcDisplay");
-    const buttons = calcModal.querySelectorAll("button");
-    let expression = "";
-
-    openCalc.addEventListener("click", () => {
-      calcModal.style.display = "flex";
-    });
-
-    calcModal.addEventListener("click", (e) => {
-      if (e.target === calcModal) {
-        calcModal.style.display = "none";
-        expression = "";
-        calcDisplay.value = "";
-      }
-    });
-
-    buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const value = btn.textContent;
-
-        if (value === "C") {
-          expression = "";
-          calcDisplay.value = "";
-        } else if (value === "=") {
-          try {
-            expression = eval(expression).toString();
-            calcDisplay.value = expression;
-          } catch {
-            calcDisplay.value = "Error";
-            expression = "";
-          }
-        } else {
-          expression += value;
-          calcDisplay.value = expression;
-        }
+    document.querySelectorAll(".infographic-card").forEach(card => {
+      card.addEventListener("click", () => {
+        const panel = card.querySelector(".article-panel");
+        panel.classList.toggle("active");
       });
     });
   </script>
+
 </body>
 </html>
-
-
