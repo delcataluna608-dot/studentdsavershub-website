@@ -1,167 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/jpeg" href="LLCI.jpeg">
-  <title>Services - Student Savers Hub</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Font: Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
-
-  <style>
-    .nav-link { position: relative; transition: color 0.3s ease; }
-    .nav-link::after {
-      content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 2px;
-      background-color: white; transition: width 0.3s ease;
-    }
-    .nav-link:hover::after { width: 100%; }
-    .brick-like { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 1px; }
-    .infographic-card { cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .infographic-card:hover { transform: scale(1.03); box-shadow: 0 12px 24px rgba(0,0,0,0.2); }
-    .article-panel { max-height: 0; overflow: hidden; transition: max-height 0.5s ease, opacity 0.5s ease; opacity: 0; }
-    .article-panel.active { max-height: 500px; opacity: 1; margin-top: 10px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Dashboard</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+</style>
 </head>
-<body class="bg-gradient-to-br from-blue-200 via-yellow-100 to-blue-100 min-h-screen flex flex-col">
+<body class="bg-green-50 min-h-screen flex flex-col">
+<!-- Navbar -->
+<nav class="bg-gradient-to-r from-green-400 to-green-600 shadow-lg px-6 py-4 flex items-center justify-between rounded-b-2xl">
+  <div class="flex space-x-6 text-white font-semibold">
+    <a href="WEBSITE.html" class="nav-link">Home</a>
+<a href="About.html" class="nav-link">About</a>
+<a href="services.html" class="nav-link">Services</a>
+<a href="contact.html" class="nav-link">Contact</a>
+  </div>
+  <div>
+    <a href="https://www.facebook.com/share/1aF5CDCp6i/?mibextid=wwXIfrs" target="_blank" class="nav-link flex items-center space-x-2">
+      <i class="fab fa-facebook"></i>
+      <span>Facebook</span>
+    </a>
+  </div>
+</nav>
 
-  <!-- Navbar -->
-  <nav class="bg-gradient-to-r from-blue-500 to-yellow-400 shadow-lg px-6 py-4 flex items-center justify-between rounded-b-2xl">
-    <div class="flex items-center space-x-8 text-white font-semibold">
-      <a href="WEBSITE.html" class="w-10 h-10 bg-white text-blue-600 flex items-center justify-center rounded-full font-bold shadow-md">
-        <img src="LLCI.jpeg" alt="Student Savers Hub Logo" class="w-full h-full object-cover">
-      </a>
-      <div class="flex space-x-6">
-        <a href="WEBSITE.html" class="nav-link">Home</a>
-        <a href="About.html" class="nav-link">About</a>
-        <a href="services.html" class="nav-link">Services</a>
-      </div>
-    </div>
-    <div>
-      <a href="https://www.facebook.com/share/1F7fwNGRhD/?mibextid=wwXIfr" target="_blank" class="nav-link flex items-center space-x-2">
-        <i class="fab fa-facebook"></i>
-        <span>Facebook</span>
-      </a>
-    </div>
-  </nav>
+<!-- Main Content Placeholder -->
+<main class="flex-1 flex items-center justify-center">
+  <h1 class="text-4xl md:text-6xl font-bold text-green-700 drop-shadow-lg animate-pulse">STUDENT SAVERS HUB</h1>
+</main>
 
-  <!-- Infographics Section -->
-  <main class="flex-1 flex flex-col items-center text-center px-6 py-16">
-    <h1 class="brick-like text-4xl md:text-6xl text-blue-700 drop-shadow-lg mb-12">Our Infographics</h1>
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full">
-
-      <!-- Example Card Template (repeat 10 times) -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
-        <i class="fas fa-lightbulb text-4xl text-yellow-500 mb-4"></i>
-        <h2 class="text-xl font-bold text-blue-600">Infographic 1</h2>
-        <p class="text-gray-600">Click to learn more</p>
-        <div class="article-panel text-left text-gray-700">
-          <p class="p-3">This is the article content for Infographic 1. It expands when you click the card and collapses when you click again.</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
-        <i class="fas fa-book-open text-4xl text-green-500 mb-4"></i>
-        <h2 class="text-xl font-bold text-blue-600">Infographic 2</h2>
-        <p class="text-gray-600">Click to learn more</p>
-        <div class="article-panel text-left text-gray-700">
-          <p class="p-3">This is the article content for Infographic 2.</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
-        <i class="fas fa-chart-line text-4xl text-red-500 mb-4"></i>
-        <h2 class="text-xl font-bold text-blue-600">Infographic 3</h2>
-        <p class="text-gray-600">Click to learn more</p>
-        <div class="article-panel text-left text-gray-700">
-          <p class="p-3">This is the article content for Infographic 3.</p>
-        </div>
-      </div>
-
-      <!-- Repeat until Infographic 10 -->
-      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
-        <i class="fas fa-graduation-cap text-4xl text-blue-500 mb-4"></i>
-        <h2 class="text-xl font-bold text-blue-600">Infographic 4</h2>
-        <p class="text-gray-600">Click to learn more</p>
-        <div class="article-panel text-left text-gray-700">
-          <p class="p-3">This is the article content for Infographic 4.</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
-        <i class="fas fa-piggy-bank text-4xl text-pink-500 mb-4"></i>
-        <h2 class="text-xl font-bold text-blue-600">Infographic 5</h2>
-        <p class="text-gray-600">Click to learn more</p>
-        <div class="article-panel text-left text-gray-700">
-          <p class="p-3">This is the article content for Infographic 5.</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
-        <i class="fas fa-cogs text-4xl text-gray-600 mb-4"></i>
-        <h2 class="text-xl font-bold text-blue-600">Infographic 6</h2>
-        <p class="text-gray-600">Click to learn more</p>
-        <div class="article-panel text-left text-gray-700">
-          <p class="p-3">This is the article content for Infographic 6.</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
-        <i class="fas fa-heart text-4xl text-red-400 mb-4"></i>
-        <h2 class="text-xl font-bold text-blue-600">Infographic 7</h2>
-        <p class="text-gray-600">Click to learn more</p>
-        <div class="article-panel text-left text-gray-700">
-          <p class="p-3">This is the article content for Infographic 7.</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
-        <i class="fas fa-seedling text-4xl text-green-400 mb-4"></i>
-        <h2 class="text-xl font-bold text-blue-600">Infographic 8</h2>
-        <p class="text-gray-600">Click to learn more</p>
-        <div class="article-panel text-left text-gray-700">
-          <p class="p-3">This is the article content for Infographic 8.</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
-        <i class="fas fa-users text-4xl text-purple-500 mb-4"></i>
-        <h2 class="text-xl font-bold text-blue-600">Infographic 9</h2>
-        <p class="text-gray-600">Click to learn more</p>
-        <div class="article-panel text-left text-gray-700">
-          <p class="p-3">This is the article content for Infographic 9.</p>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
-        <i class="fas fa-globe text-4xl text-blue-400 mb-4"></i>
-        <h2 class="text-xl font-bold text-blue-600">Infographic 10</h2>
-        <p class="text-gray-600">Click to learn more</p>
-        <div class="article-panel text-left text-gray-700">
-          <p class="p-3">This is the article content for Infographic 10.</p>
-        </div>
-      </div>
-
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-gradient-to-r from-yellow-400 to-blue-500 shadow-inner text-center py-6 text-white rounded-t-2xl">
-    <p class="text-lg font-semibold">© 2025 Student Savers Hub. All rights reserved.</p>
-    <p class="text-sm opacity-90">“Small savings today build the foundation for big dreams tomorrow.”</p>
-  </footer>
-
-  <!-- Script for Toggle -->
-  <script>
-    document.querySelectorAll(".infographic-card").forEach(card => {
-      card.addEventListener("click", () => {
-        const panel = card.querySelector(".article-panel");
-        panel.classList.toggle("active");
-      });
-    });
-  </script>
-
+<!-- Footer -->
+<footer class="bg-gradient-to-r from-green-600 to-green-400 shadow-inner text-center py-6 text-white rounded-t-2xl">
+  <p class="text-lg font-semibold">© 2025 Student Savers Hub. All rights reserved.</p>
+  <p class="text-sm opacity-90">PATPAT AND ASTHER GWAPO!!!!!!!!!!</p>
+</footer>
 </body>
 </html>
