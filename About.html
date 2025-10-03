@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/jpeg" href="LLCI.jpeg">
+<link rel="icon" type="image/jpeg" href="LLCI.jpeg">
 <title>Modern Dashboard - Student Savers Hub</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <!-- Font Awesome for Icons -->
@@ -35,11 +35,21 @@ html {
 
 <!-- Navbar -->
 <nav class="bg-gradient-to-r from-blue-500 to-yellow-400 shadow-lg px-6 py-4 flex items-center justify-between rounded-b-2xl">
-  <div class="flex space-x-6 text-white font-semibold">
-    <a href="WEBSITE.html" class="nav-link">Home</a>
-    <a href="About.html" class="nav-link">About</a>
-    <a href="services.html" class="nav-link">Services</a>
+  <!-- Left: Logo + Links -->
+  <div class="flex items-center space-x-8 text-white font-semibold">
+    <!-- Logo -->
+    <a href="WEBSITE.html" class="w-10 h-10 bg-white text-blue-600 flex items-center justify-center rounded-full font-bold shadow-md">
+      <img src="LLCI.jpeg" alt="Student Savers Hub Logo" class="w-full h-full object-cover rounded-full">
+    </a>
+    <!-- Nav Links -->
+    <div class="flex space-x-6">
+      <a href="WEBSITE.html" class="nav-link">Home</a>
+      <a href="About.html" class="nav-link">About</a>
+      <a href="services.html" class="nav-link">Services</a>
+    </div>
   </div>
+
+  <!-- Right: Facebook -->
   <div>
     <a href="https://www.facebook.com/share/1aF5CDCp6i/?mibextid=wwXIfr" target="_blank" class="nav-link flex items-center space-x-2">
       <i class="fab fa-facebook"></i>
@@ -78,6 +88,3 @@ html {
 
 </body>
 </html>
-
-
-
