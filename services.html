@@ -7,10 +7,10 @@
  <link rel="icon" type="image/png" href="LLCI.jpeg">
 
  <script src="https://cdn.tailwindcss.com"></script>
- <!-- Google Font: Montserrat -->
- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
  <!-- Font Awesome for Icons -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ <!-- Google Font -->
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
 
  <style>
   .nav-link { position: relative; transition: color 0.3s ease; }
@@ -19,39 +19,18 @@
     background-color: white; transition: width 0.3s ease;
   }
   .nav-link:hover::after { width: 100%; }
+
   .brick-like { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: 1px; }
 
-  .infographic-card {
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-  }
-  .infographic-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
-  }
-  .infographic-image {
-    width: 100%;
-    height: 18rem;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  .infographic-card:hover .infographic-image {
-    transform: scale(1.05);
-  }
+  .infographic-card { cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .infographic-card:hover { transform: scale(1.03); box-shadow: 0 12px 24px rgba(0,0,0,0.2); }
 
   .article-panel { 
-    display: none; 
-    grid-column: span 3 / span 3; 
+    max-height: 0; overflow: hidden; opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease; 
   }
   .article-panel.active { 
-    display: block; 
-    animation: fadeIn 0.4s ease;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    max-height: 1000px; opacity: 1; margin-top: 10px; 
   }
  </style>
 </head>
@@ -60,7 +39,6 @@
  <!-- Navbar -->
  <nav class="bg-gradient-to-r from-blue-500 to-yellow-400 shadow-lg px-6 py-4 flex items-center justify-between rounded-b-2xl">
    <div class="flex items-center space-x-8 text-white font-semibold">
-     <!-- Fixed circular logo -->
      <a href="WEBSITE.html" class="w-10 h-10 rounded-full overflow-hidden shadow-md">
        <img src="LLCI.jpeg" alt="Student Savers Hub Logo" class="w-full h-full object-cover">
      </a>
@@ -84,102 +62,104 @@
    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl w-full">
 
      <!-- Infographic 1 -->
-     <div class="bg-white rounded-2xl shadow-lg infographic-card">
-       <img src="INF1.jpeg" alt="Infographic 1 Image" class="infographic-image">
-       <div class="p-4 text-center">
-         <h2 class="text-xl font-bold text-blue-600">Infographic 1</h2>
-         <p class="text-gray-600">Click to learn more</p>
+     <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+       <i class="fas fa-lightbulb text-4xl text-yellow-500 mb-4"></i>
+       <h2 class="text-xl font-bold text-blue-600">Infographic 1</h2>
+       <p class="text-gray-600">Click to learn more</p>
+       <div class="article-panel text-left text-gray-700">
+         <p class="p-3">Study Hard, Save Harder: Empowering Students to Manage Their Finances Wisely — our infographic emphasizes the importance of financial literacy among students...</p>
        </div>
-     </div>
-     <div class="article-panel bg-white rounded-2xl shadow-lg p-6 text-left text-gray-700">
-       <p class="p-3">Study Hard, Save Harder: Empowering Students to Manage Their Finances Wisely ...</p>
      </div>
 
      <!-- Infographic 2 -->
-     <div class="bg-white rounded-2xl shadow-lg infographic-card">
-       <img src="INF2.jpeg" alt="Infographic 2 Image" class="infographic-image">
-       <div class="p-4 text-center">
-         <h2 class="text-xl font-bold text-blue-600">Infographic 2</h2>
-         <p class="text-gray-600">Click to learn more</p>
+     <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+       <i class="fas fa-book-open text-4xl text-green-500 mb-4"></i>
+       <h2 class="text-xl font-bold text-blue-600">Infographic 2</h2>
+       <p class="text-gray-600">Click to learn more</p>
+       <div class="article-panel text-left text-gray-700">
+         <p class="p-3">Smart Saving Habits: Tipid Tips for Students — this infographic offers practical ways for students to manage allowances...</p>
        </div>
-     </div>
-     <div class="article-panel bg-white rounded-2xl shadow-lg p-6 text-left text-gray-700">
-       <p class="p-3">Smart Saving Habits: Tipid Tips for Students ...</p>
      </div>
 
      <!-- Infographic 3 -->
-     <div class="bg-white rounded-2xl shadow-lg infographic-card">
-       <img src="INF3.jpeg" alt="Infographic 3 Image" class="infographic-image">
-       <div class="p-4 text-center">
-         <h2 class="text-xl font-bold text-blue-600">Infographic 3</h2>
-         <p class="text-gray-600">Click to learn more</p>
+     <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+       <i class="fas fa-chart-line text-4xl text-red-500 mb-4"></i>
+       <h2 class="text-xl font-bold text-blue-600">Infographic 3</h2>
+       <p class="text-gray-600">Click to learn more</p>
+       <div class="article-panel text-left text-gray-700">
+         <p class="p-3">Walang Pasok, Walang Allowance — our infographic depicts how students can still save money even on days when classes are suspended...</p>
        </div>
-     </div>
-     <div class="article-panel bg-white rounded-2xl shadow-lg p-6 text-left text-gray-700">
-       <p class="p-3">Walang Pasok, Walang Allowance ...</p>
      </div>
 
      <!-- Infographic 4 -->
-     <div class="bg-white rounded-2xl shadow-lg infographic-card">
-       <img src="INF4.jpeg" alt="Infographic 4 Image" class="infographic-image">
-       <div class="p-4 text-center">
-         <h2 class="text-xl font-bold text-blue-600">Infographic 4</h2>
-         <p class="text-gray-600">Click to learn more</p>
+     <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+       <i class="fas fa-graduation-cap text-4xl text-blue-500 mb-4"></i>
+       <h2 class="text-xl font-bold text-blue-600">Infographic 4</h2>
+       <p class="text-gray-600">Click to learn more</p>
+       <div class="article-panel text-left text-gray-700">
+         <p class="p-3">Utang Gusto, Bayad Ayaw? Let's Break the Cycle! — this infographic addresses unhealthy borrowing habits...</p>
        </div>
-     </div>
-     <div class="article-panel bg-white rounded-2xl shadow-lg p-6 text-left text-gray-700">
-       <p class="p-3">Utang Gusto, Bayad Ayaw? Let's Break the Cycle! ...</p>
      </div>
 
      <!-- Infographic 5 -->
-     <div class="bg-white rounded-2xl shadow-lg infographic-card">
-       <img src="INF5.jpeg" alt="Infographic 5 Image" class="infographic-image">
-       <div class="p-4 text-center">
-         <h2 class="text-xl font-bold text-blue-600">Infographic 5</h2>
-         <p class="text-gray-600">Click to learn more</p>
+     <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+       <i class="fas fa-piggy-bank text-4xl text-pink-500 mb-4"></i>
+       <h2 class="text-xl font-bold text-blue-600">Infographic 5</h2>
+       <p class="text-gray-600">Click to learn more</p>
+       <div class="article-panel text-left text-gray-700">
+         <p class="p-3">In a world where uncertainties abound, the ability to save money is a superpower. This infographic provides insights into creating financial stability early in life...</p>
        </div>
-     </div>
-     <div class="article-panel bg-white rounded-2xl shadow-lg p-6 text-left text-gray-700">
-       <p class="p-3">In a world where uncertainties abound ...</p>
      </div>
 
      <!-- Infographic 6 -->
-     <div class="bg-white rounded-2xl shadow-lg infographic-card">
-       <img src="INF6.jpeg" alt="Infographic 6 Image" class="infographic-image">
-       <div class="p-4 text-center">
-         <h2 class="text-xl font-bold text-blue-600">Infographic 6</h2>
-         <p class="text-gray-600">Click to learn more</p>
+     <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+       <i class="fas fa-cogs text-4xl text-gray-600 mb-4"></i>
+       <h2 class="text-xl font-bold text-blue-600">Infographic 6</h2>
+       <p class="text-gray-600">Click to learn more</p>
+       <div class="article-panel text-left text-gray-700">
+         <p class="p-3">A Big, Heartfelt “Thank You” to Our Amazing Teachers — a visual appreciation of educators’ contributions...</p>
        </div>
-     </div>
-     <div class="article-panel bg-white rounded-2xl shadow-lg p-6 text-left text-gray-700">
-       <p class="p-3">A Big, Heartfelt "Thank You" to Our Amazing Teachers ...</p>
      </div>
 
      <!-- Infographic 7 -->
-     <div class="bg-white rounded-2xl shadow-lg infographic-card">
-       <img src="INF7.jpeg" alt="Infographic 7 Image" class="infographic-image">
-       <div class="p-4 text-center">
-         <h2 class="text-xl font-bold text-blue-600">Infographic 7</h2>
-         <p class="text-gray-600">Click to learn more</p>
+     <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+       <i class="fas fa-heart text-4xl text-red-400 mb-4"></i>
+       <h2 class="text-xl font-bold text-blue-600">Infographic 7</h2>
+       <p class="text-gray-600">Click to learn more</p>
+       <div class="article-panel text-left text-gray-700">
+         <p class="p-3">Effective Budgeting for Students — this infographic presents easy-to-follow steps for creating a student budget that works...</p>
        </div>
-     </div>
-     <div class="article-panel bg-white rounded-2xl shadow-lg p-6 text-left text-gray-700">
-       <p class="p-3">Effective budgeting is essential ...</p>
      </div>
 
      <!-- Infographic 8 -->
-     <div class="bg-white rounded-2xl shadow-lg infographic-card">
-       <img src="INF8.jpeg" alt="Infographic 8 Image" class="infographic-image">
-       <div class="p-4 text-center">
-         <h2 class="text-xl font-bold text-blue-600">Infographic 8</h2>
-         <p class="text-gray-600">Click to learn more</p>
+     <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+       <i class="fas fa-seedling text-4xl text-green-400 mb-4"></i>
+       <h2 class="text-xl font-bold text-blue-600">Infographic 8</h2>
+       <p class="text-gray-600">Click to learn more</p>
+       <div class="article-panel text-left text-gray-700">
+         <p class="p-3">Embark on the Student Savers Journey — an infographic that encourages financial growth, smart spending, and awareness of money values...</p>
        </div>
      </div>
-     <div class="article-panel bg-white rounded-2xl shadow-lg p-6 text-left text-gray-700">
-       <p class="p-3">Embark on the Student Savers Journey ...</p>
+
+     <!-- Infographic 9 -->
+     <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card">
+       <i class="fas fa-users text-4xl text-purple-500 mb-4"></i>
+       <h2 class="text-xl font-bold text-blue-600">Infographic 9</h2>
+       <p class="text-gray-600">Click to learn more</p>
+       <div class="article-panel text-left text-gray-700">
+         <p class="p-3">This infographic shows the power of teamwork in achieving savings goals — because saving together makes it easier and more motivating...</p>
+       </div>
      </div>
 
-     
+     <!-- Infographic 10 (Centered) -->
+     <div class="bg-white rounded-2xl shadow-lg p-6 infographic-card md:col-span-2 lg:col-span-3 mx-auto max-w-md">
+       <i class="fas fa-globe text-4xl text-blue-400 mb-4"></i>
+       <h2 class="text-xl font-bold text-blue-600">Infographic 10</h2>
+       <p class="text-gray-600">Click to learn more</p>
+       <div class="article-panel text-left text-gray-700">
+         <p class="p-3">Our final infographic encapsulates the mission of Student Savers Hub — to build a community that values saving, financial literacy, and empowerment among the youth...</p>
+       </div>
+     </div>
 
    </div>
  </main>
@@ -190,27 +170,25 @@
    <p class="text-sm opacity-90">“Small savings today build the foundation for big dreams tomorrow.”</p>
  </footer>
 
- <!-- Script for Toggle with Auto-Close -->
+ <!-- Auto-Close Script -->
  <script>
    document.querySelectorAll(".infographic-card").forEach(card => {
      card.addEventListener("click", () => {
-       const panel = card.nextElementSibling;
+       const panel = card.querySelector(".article-panel");
 
-       // Close all other open panels
+       // Close all other panels
        document.querySelectorAll(".article-panel.active").forEach(openPanel => {
          if (openPanel !== panel) {
            openPanel.classList.remove("active");
          }
        });
 
-       // Toggle clicked panel
-       if (panel && panel.classList.contains("article-panel")) {
+       // Toggle this one
+       if (panel) {
          panel.classList.toggle("active");
-       }
-
-       // Smooth scroll to opened panel
-       if (panel.classList.contains("active")) {
-         panel.scrollIntoView({ behavior: "smooth", block: "center" });
+         if (panel.classList.contains("active")) {
+           panel.scrollIntoView({ behavior: "smooth", block: "center" });
+         }
        }
      });
    });
@@ -218,4 +196,3 @@
 
 </body>
 </html>
-
